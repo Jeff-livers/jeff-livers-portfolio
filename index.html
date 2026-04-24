@@ -25,15 +25,30 @@
 
     .container {
       width: 100%;
-      max-width: 800px;
+      max-width: 1000px;
     }
 
     h1 {
       font-size: clamp(3rem, 10vw, 7rem);
       font-weight: 700;
       line-height: 1;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      font-size: clamp(0.65rem, 2vw, 0.8rem);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: #888888;
+      text-align: center;
+      margin-bottom: 32px;
     }
 
     p {
@@ -97,6 +112,45 @@
       width: 100%;
     }
 
+    .work-section {
+      margin-top: 64px;
+      margin-bottom: 64px;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .project-card img {
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .project-card a {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #000000;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .project-card a:not(:has(img)) {
+      text-decoration: underline;
+    }
+
+    .project-card p {
+      font-size: 0.875rem;
+      color: #444444;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
     @media (max-width: 480px) {
       body {
         padding: 32px 16px;
@@ -107,12 +161,41 @@
 <body>
 
   <div class="container">
+  <main>
 
-  <h1>Jeff Livers</h1>
+  <section class="hero">
+    <h1>Jeff Livers</h1>
+    <p class="subtitle">Product &amp; Web Designer&nbsp;&nbsp;|&nbsp;&nbsp;UI/UX&nbsp;&nbsp;|&nbsp;&nbsp;Web Development&nbsp;&nbsp;|&nbsp;&nbsp;Digital Marketing</p>
+    <p>I turn business problems into designed and built solutions.</p>
+  </section>
 
-  <p>I turn business problems into designed, built solutions.</p>
+  <section class="work-section">
+    <h2>My Work</h2>
+    <div class="project-grid">
 
-  <!-- FORMSPREE: Replace YOUR_FORM_ID with your Formspree form ID -->
+      <div class="project-card">
+        <a href="https://sdinjurylaw.com/" target="_blank" rel="noopener noreferrer"><img src="Images/Images/sdilc.png" alt="San Diego Injury Law Center"></a>
+        <a href="https://sdinjurylaw.com/" target="_blank" rel="noopener noreferrer">San Diego Injury Law Center</a>
+        <p>Site redesign and digital marketing for one of San Diego's top injury law firms</p>
+      </div>
+
+      <div class="project-card">
+        <a href="https://streamlinehomeorg.com/" target="_blank" rel="noopener noreferrer"><img src="Images/Images/streamline.png" alt="Streamline Home Organizing"></a>
+        <a href="https://streamlinehomeorg.com/" target="_blank" rel="noopener noreferrer">Streamline Home Organizing</a>
+        <p>Designed and built site from scratch for a luxury home organizing business</p>
+      </div>
+
+      <div class="project-card">
+        <a href="https://appellattorneys.com/" target="_blank" rel="noopener noreferrer"><img src="Images/appell.png" alt="Appell Attorneys"></a>
+        <a href="https://appellattorneys.com/" target="_blank" rel="noopener noreferrer">Appell Attorneys</a>
+        <p>Designed and built site from scratch for a San Diego personal injury law firm</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Get In Touch</h2>
   <form action="https://formspree.io/f/mdayovzy" method="POST">
 
     <!-- Honeypot field — bots fill this out, humans don't see it -->
@@ -139,7 +222,9 @@
     <button type="submit">Send</button>
 
   </form>
+  </section>
 
+  </main>
   </div>
 
 </body>
